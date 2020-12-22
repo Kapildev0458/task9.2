@@ -1,0 +1,43 @@
+<form action='http://192.168.43.148/cgi-bin/ss.py'>
+What you want to do in docker? <br/><br/>
+1. To install docker: <br/>
+<button name="x" type="submit" value="Install Docker" >Install Docker</button><br/>
+</form>
+<form action='http://192.168.43.148/cgi-bin/ss.py'>
+2. To Download Docker image in your PC:<br/>
+<select name="i">
+<option>centos:latest</option>
+<option>centos:7</option>
+<option>centos:6</option>
+<option>ubuntu</option>
+<option>ubuntu:rolling</option>
+<option>oraclelinux</option>
+<option>oraclelinux:7-slim</option>
+<option>oraclelinux:7</option>
+</select><br/>
+<button name="x" type="submit" value="Download Docker image" >Download</button><br/>
+</form>
+
+<form action='http://192.168.43.148/cgi-bin/ss.py'>
+3. To install docker image in our PC <br/>
+Give a name to your OS: <input name='name' type="text"/><br/>
+select your OS name which is downloaded in your pc: 
+<select name="i">
+<option>centos:latest</option>
+<option>centos:7</option>
+<option>centos:6</option>
+<option>ubuntu</option>
+<option>ubuntu:rolling</option>
+<option>oraclelinux</option>
+<option>oraclelinux:7-slim</option>
+<option>oraclelinux:7</option>
+</select><br/>
+<button name="x" type="submit" value="Install Docker image" >Install</button><br/>
+</form>
+<form action='http://192.168.43.148/cgi-bin/ss.py'>
+4. To terminet your OS:<br/>
+Give your OS name or OS id: <input name='name' type='text'/><br/>
+<button name="x" type="submit" value="terminet docker image" >terminet docker image</button>
+</form>
+5. Go Back to menu:<br/>
+<button onclick="document.location='http://192.168.43.148/first.html'">Go back</button>
