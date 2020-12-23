@@ -16,10 +16,10 @@ if yourChoice == "Configer yum":
 	if s[0] == 0:
 		print("  yum is already configered.")
 	else:
-		sub.getstatusoutput("sudo mv /root/yumconfi.repo /etc/yum.repos.d/yumsa.repo")
+		sub.getstatusoutput("sudo cp /root/yumconfi.repo /etc/yum.repos.d/yumsa.repo")
 
 elif yourChoice == "Install Docker":
-	sub.getstatusoutput("sudo mv /root/d.repo /etc/yum.repos.d/")
+	sub.getstatusoutput("sudo cp /root/d.repo /etc/yum.repos.d/")
 	s = sub.getstatusoutput("sudo yum install docker-ce --nobest -y")
 	if s[0] == 0:
 		print('docker is installed successfully')
@@ -51,23 +51,23 @@ elif yourChoice == "terminet docker image":
 		print('something want wrong. Might be possiblity that, {} name is not exist'.format(osName))
 			
 elif yourChoice == "Create Master":
-	s = sub.getstatusoutput("sudo mv /root/core /etc/hadoop/core-site.xml")
-	b = sub.getstatusoutput("sudo mv /root/hdfs /etc/hadoop/hdfs-site.xml")
+	s = sub.getstatusoutput("sudo cp /root/core /etc/hadoop/core-site.xml")
+	b = sub.getstatusoutput("sudo cp /root/hdfs /etc/hadoop/hdfs-site.xml")
 	if( s[0] == 0 and b[0] == 0):
 		print("your master name node is created successfully")
 	else:
 		print('something want wrong. Might be possiblity that master is already configred')
 
 elif yourChoice == "Create Slave":
-	s = sub.getstatusoutput("sudo mv /root/coredata /etc/hadoop/core-site.xml")
-	b = sub.getstatusoutput("sudo mv /root/hdfsdata /etc/hadoop/hdfs-site.xml")
+	s = sub.getstatusoutput("sudo cp /root/coredata /etc/hadoop/core-site.xml")
+	b = sub.getstatusoutput("sudo cp /root/hdfsdata /etc/hadoop/hdfs-site.xml")
 	if( s[0] == 0 and b[0] == 0):	
 		print("your slave or data node is created successfully")
 	else:
 		print('something want wrong. Might be possiblity that slave is already configred')
 
 elif yourChoice == "Create Clint":
-	s = sub.getstatusoutput("sudo mv /root/coreclint /etc/hadoop/core-site.xml")
+	s = sub.getstatusoutput("sudo cp /root/coreclint /etc/hadoop/core-site.xml")
 	if s[0] == 0:
 		print("your clint is created successfully")
 	else:
