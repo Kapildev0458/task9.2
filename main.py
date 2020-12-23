@@ -10,7 +10,6 @@ a = cgi.FieldStorage()
 yourChoice = a.getvalue('x')
 imgName = a.getvalue('i')
 osName = a.getvalue('name')
-sub.getoutput("sudo setenforce 0")
 if yourChoice == "Configer yum":
 	print("please wet a second...")
 	s=sub.getstatusoutput("sudo yum install firefox")
@@ -49,7 +48,7 @@ elif yourChoice == "terminet docker image":
 	if s[0] == 0:
 		print("os is terminet successfully name {}".format(osName)) 
 	else:
-		print('something want wrong. Might be possiblity that, {} name is not exist'.format(osName)')
+		print('something want wrong. Might be possiblity that, {} name is not exist'.format(osName))
 			
 elif yourChoice == "Create Master":
 	s = sub.getstatusoutput("sudo mv /root/core /etc/hadoop/core-site.xml")
