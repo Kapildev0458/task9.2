@@ -1,0 +1,57 @@
+these are some files that you want to past in /root/
+first is "yumconfi.repo" in this past this
+[dvd1] 
+baseurl=file:///run/media/root/RHEL-8-0-0-BaseOS-x86_64/AppStream 
+gpgcheck=0 
+
+[dvd2]   
+baseurl=file:///run/media/root/RHEL-8-0-0-BaseOS-x86_64/BaseOS 
+gpgcheck=0
+
+
+then second is "doc.repo" in this file past
+[Docker]
+baseurl=https://download.docker.com/linux/centos/7/x86_64/stable
+gpgcheck=0
+
+
+then third "core"
+<configuration> 
+<property> 
+<name>fs.default.name</name> 
+<value>hdfs://ip of master:port no</value> 
+</property> 
+</configuration>
+ 
+ then forth "hdfs"
+<configuration> 
+<property> 
+<name>dfs.data.dir</name> 
+<value>/datadir</value> 
+</property> 
+</configuration>
+
+fifth is "hdfsdata"
+<configuration> 
+<property> 
+<name>dfs.data.dir</name> 
+<value>/datadir</value> 
+</property> 
+</configuration>
+
+
+sixth is "coredata"
+<configuration> 
+<property> 
+<name>fs.default.name</name> 
+<value>hdfs://ip of master:port no</value> 
+</property> 
+</configuration>
+
+seventh and last is "coreclint"
+<configuration> 
+<property> 
+<name>fs.default.name</name> 
+<value>hdfs://ip of master:port no</value> 
+</property> 
+</configuration>
